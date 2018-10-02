@@ -1,0 +1,16 @@
+spring.main.web-application-type: NONE
+spring.main.banner-mode: 'off'
+spring.datasource:
+  url: 'jdbc:mysql://localhost/wallethub_adrian?autoReconnect=true&useSSL=false&useServerPrepStmts=false&rewriteBatchedStatements=true'
+  username: wallethub
+  password: wallethub
+  driver-class-name: com.mysql.jdbc.Driver
+  initialization-mode: always
+
+log-parser:
+  file-path: './access.log'
+  batch:
+    size: 50
+    timout: 10000
+
+logging.level.root: ERROR

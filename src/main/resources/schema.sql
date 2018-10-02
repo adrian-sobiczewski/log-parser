@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS `LOG`;
+CREATE TABLE IF NOT EXISTS LOG (
+    date DATETIME(3),
+    address VARCHAR(15),
+    method ENUM('GET'),
+    status SMALLINT,
+    agent VARCHAR(255),
+    PRIMARY KEY(date, address)
+);
+
+DROP TABLE IF EXISTS `BLOCKED`;
+CREATE TABLE BLOCKED (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    address VARCHAR(15),
+    comment VARCHAR(255),
+    PRIMARY KEY (id)
+);
